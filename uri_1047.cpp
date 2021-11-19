@@ -6,21 +6,24 @@ int main() {
     int StartHour, StartMin, EndHour, EndMin, Hour, Min;
     cin >> StartHour >> StartMin >> EndHour >> EndMin;
     
-    if(EndHour >= StartHour && EndMin > StartMin){
-        Hour = EndHour - StartHour;
+    if(EndMin > StartMin){
         Min = EndMin - StartMin;
+        if(EndHour < StartHour) {
+            Hour = (EndHour + 24) - StartHour;
+        }
+        else {
+            Hour = EndHour - StartHour;
+        }        
     }
-    else if(EndHour > StartHour && EndMin < StartMin){
+    else if(EndMin < StartMin){ 
         Min = (EndMin + 60) - StartMin;
-        Hour = (EndHour - 1) - StartHour;
-    }
-    else if(EndHour < StartHour && EndMin > StartMin){
-        Hour = (EndHour + 24) - StartHour;
-        Min = EndMin - StartMin;
-    }
-    else if(EndHour < StartHour && EndMin < StartMin){
-        Hour = (EndHour + 24 - 1) - StartHour;
-        Min = (EndMin + 60) - StartMin;
+        EndHour -= 1;
+        if (EndHour < StartHour){
+            Hour = (EndHour + 24) - StartHour;
+        }
+        else {
+            Hour = EndHour - StartHour;
+        }
     }
     else if(EndHour == StartHour && EndMin == StartMin){
         Hour = 24;
