@@ -3,8 +3,7 @@
 using namespace std;
  
 int main() {
-    int inputNum, numberCheck;
-    string result;
+    int inputNum;
     cin >> inputNum;
     for(int i = 2; i < 10000; i++){
         if(i % inputNum == 2)
