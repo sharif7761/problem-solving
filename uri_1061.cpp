@@ -32,7 +32,7 @@ if(start_hour < 0){
      cout << start_day << " dia(s)" << endl;
      cout << start_hour << " hora(s)" << endl;
      cout << start_min << " minuto(s)" << endl;
-     cout << start_day << " segundo(s)" << endl;
+     cout << start_sec << " segundo(s)" << endl;
 
  return 0;
 }
