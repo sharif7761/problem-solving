@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-
    double arr[12][12], sum = 0;
    char operation;
    cin >> operation;
