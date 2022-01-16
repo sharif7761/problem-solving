@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int noOfinput;
+    cin >> noOfinput;
+    for(int i = 0; i < noOfinput; i++){
+        for(int j = 0; j < noOfinput; j++){
+            if(i == 0 || j == 0 || i == noOfinput - 1 ||  j == noOfinput - 1 ){
+                cout<< "1";
+            } else {
+                if(i == 1 || j == 1 || i == noOfinput - 2 ||  j == noOfinput - 2){
+                    cout<<"2";
+                } else {
+                    cout<<"3";
+                }
+            }
+        }
+        cout<< endl;
+    }
+
+    return 0;
+}
